@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  headline: MyText
+  display_order: 1
+  url: MyText
+  like_count: 1
+  article_id: 
+
+two:
+  headline: MyText
+  display_order: 1
+  url: MyText
+  like_count: 1
+  article_id: 

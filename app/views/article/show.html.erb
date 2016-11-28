@@ -1,0 +1,6 @@
+<p><%= @article.title %></p>
+<p>Created: <%= time_ago_in_words(@article.created_at) %> ago</p>
+<p>Like: <%= @article.like_count %></p>
+<p><%= @article.string %></p>
+
+<%= @article.all_texts_and_images.to_json %>
