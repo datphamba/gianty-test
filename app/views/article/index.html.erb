@@ -1,24 +1,27 @@
-<h5>Testing Ruby on Rails - Dat Pham (Candidate for Ruby on Rails Developer)</h5>
-<div clas="wrapper">
+<div class="wrapper" xmlns="http://www.w3.org/1999/html">
+  <h1>ARTICLE</h1>
     <% @article.each do |article| %>
       <!--test article was posted-->
       <% if article.published? %>
-          <h1><%= article.title %></h1>
-          <p>Created: <%= time_ago_in_words(article.created_at) %> ago | <span>Like: <%= article.like_count %></span>
-            <%= button_to 'like', increase_like_path, method: "put" %></p>
-          <p><%= article.string %></p>
-          <p style="border-bottom: 1px solid black" />
-
-          <% article.all_texts_and_images.each do |content| %>
-              <p><%= content.headline  %></p>
-              <% if content.try(:url) %>
-                  <p><%= image_tag content.url  %></p>
-              <% else %>
-                  <p><%= content.content  %></p>
-              <% end %>
-          <% end %>
-
-          <p style="border-bottom: 1px solid black" />
+          <p class="title"><%= article.title %></p>
+          <div class="process-time">
+            <span>Created: <%= time_ago_in_words(article.created_at) %> ago </span> |
+            <span class="like-count">
+              <%= article.like_count %>
+              <span><%= button_to 'like', increase_like_path, method: "put" %></span>
+            </span>
+          </div>
+          <div class="article-content">
+            <p class="intro-text"><%= article.string %></p>
+            <% article.all_texts_and_images.each do |content| %>
+                <p class="article-headline"><%= content.headline  %></p>
+                <% if content.try(:url) %>
+                    <p class="article-image"><%= image_tag content.url  %></p>
+                <% else %>
+                    <p class="article-text"><%= content.content  %></p>
+                <% end %>
+            <% end %>
+          </div>
       <% else %>
         <p>...</p>
       <% end %>
