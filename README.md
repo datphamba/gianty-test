@@ -2,9 +2,9 @@
 1. clone project and run `bundle install` to update gem for project.
 2. run rake `db:setup` to setup database for project.
 * make sure that your machine have been installed `ruby 2.3.0` and `rails 4.2.5` to run this project.
-3. run `rails s` to start project.
 
-#PUSH DATA TO TEST THIS PROJECT
+
+#PUSH DATA FOR TEST THIS PROJECT
 
 Please run `rails console` and add database like example hereafter
 
@@ -28,5 +28,8 @@ Everything you need to update databse. Please do it on `rails console`.
  <b>Article.first.all_texts_and_images[1].update(display_order: 1) </b>
  => update ordering for text.
 
+#RSPEC
+
+>Run `bundle exec rspec --format documentation` to start rspect test.
 
 (Thank so much for interesting in with my mini project)
