@@ -8,7 +8,7 @@
             <span>Created: <%= time_ago_in_words(article.created_at) %> ago </span> |
             <span class="like-count">
               <%= article.like_count %>
-              <span><%= button_to 'like', increase_like_path, method: "put" %></span>
+              <span><%= button_to 'like', increase_like_path(:id => article.id), method: "put" %></span>
             </span>
           </div>
           <div class="article-content">

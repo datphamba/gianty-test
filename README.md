@@ -22,14 +22,9 @@ Image.new(headline: ' ', display_order: 5, url: 'https://cdn2.macworld.co.uk/cms
 `rails s` or `rails s -p 9001` to start project. Default Project will start on port 3000 but if you run -p 9001 port will be start on port 9001 (0.0.0.0:9001) 
  
 ## NOTED:
-Everything you need to update databse. Please do it on `rails console`.
->For Example:
- 
- <b>Article.first.all_texts_and_images[1].update(display_order: 1) </b>
- => update ordering for text.
+Everything you need to update databse. Please do it on `rails console` or config seed file and run `rake db:drop` and `rake db:setup` to update data.
 
 #RSPEC
-
 >Run `bundle exec rspec --format documentation` to start rspect test.
 
 (Thank so much for interesting in with my mini project)

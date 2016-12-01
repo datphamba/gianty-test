@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gianty-test.iml" filepath="$PROJECT_DIR$/.idea/gianty-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/../gianty_test/.idea/workspace.iml" filepath="$PROJECT_DIR$/../gianty_test/.idea/workspace.iml" />
     </modules>
   </component>

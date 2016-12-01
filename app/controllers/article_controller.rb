@@ -8,13 +8,16 @@ class ArticleController < ApplicationController
     end
 
     def update
+        #TODO
     end
 
     def destroy
+        #TODO
     end
     
     def increase_like_count
-        Article.first.increase_like_count
+        @article = Article.find(params[:id])
+        @article.increase_like_count
         redirect_to :controller => 'article', :action => 'index'
     end
 end
