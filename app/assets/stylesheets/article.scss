@@ -14,55 +14,64 @@ $blue: blue;
   margin: 20px 100px;
 
   border: 1px solid $border-light;
-
-  .title {
-    text-align: left;
-    font-size: 34px;
-    margin: 5px 0 20px 5px;
-    color: $black-opacity-8;
-    font-weight: 300;
-  }
-  .process-time {
-    text-align: left;
-    font-size: 14px;
-    color: $black-opacity-3;
-
-    padding: 16px;
-
-    background-color: $black-opacity-06;
-    .like-count {
-      font-size: 20px;
-      font-weight: bold;
-      display: inline-flex;
-      padding: 0 10px;
-      span {
-        margin-left: 10px;
-        margin-top: -1px;
-        background: $blue;
-      }
-    }
-  }
-  .intro-text {
-    text-align: left;
-    font-weight: 700;
-    color: $black-opacity-5;
-  }
-  .article-content {
-    padding: 16px;
-    text-align: left;
-    word-break: break-word;
-    word-wrap: break-word;
-    white-space: pre-line;
-
-    .article-image {
-      img {
-        width: 100%;
-      }
-    }
-    .article-text {
-      line-height: 1.7;
-      font-weight: 300;
+  .article-content-item {
+    border-bottom: 1px solid $border-light;
+    .title {
+      text-align: left;
+      font-size: 34px;
       color: $black-opacity-8;
+      font-weight: 300;
+
+      margin: 5px 0 20px 5px;
+      padding-top: 15px;
+    }
+    .process-time {
+      text-align: left;
+      font-size: 14px;
+      color: $black-opacity-3;
+
+      padding: 16px;
+
+      background-color: $black-opacity-06;
+      .like-count {
+        font-size: 20px;
+        font-weight: bold;
+
+        display: inline-flex;
+
+        padding: 0 10px;
+        span {
+          margin-left: 10px;
+          margin-top: -1px;
+
+          background: $blue;
+        }
+      }
+    }
+    .intro-text {
+      text-align: left;
+      font-weight: 700;
+      color: $black-opacity-5;
+    }
+    .article-content {
+      padding: 16px;
+
+      text-align: left;
+
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-line;
+
+      .article-image {
+        img {
+          width: 100%;
+        }
+      }
+      .article-text {
+        line-height: 1.7;
+        font-weight: 300;
+        color: $black-opacity-8;
+      }
     }
   }
 }

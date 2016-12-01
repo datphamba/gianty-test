@@ -2,28 +2,28 @@
   <h1>ARTICLE</h1>
     <% @article.each do |article| %>
       <!--test article was posted-->
-      <% if article.published? %>
-          <p class="title"><%= article.title %></p>
-          <div class="process-time">
-            <span>Created: <%= time_ago_in_words(article.created_at) %> ago </span> |
-            <span class="like-count">
-              <%= article.like_count %>
-              <span><%= button_to 'like', increase_like_path(:id => article.id), method: "put" %></span>
-            </span>
-          </div>
-          <div class="article-content">
-            <p class="intro-text"><%= article.string %></p>
-            <% article.all_texts_and_images.each do |content| %>
-                <p class="article-headline"><%= content.headline  %></p>
-                <% if content.try(:url) %>
-                    <p class="article-image"><%= image_tag content.url  %></p>
-                <% else %>
-                    <p class="article-text"><%= content.content  %></p>
-                <% end %>
-            <% end %>
-          </div>
-      <% else %>
-        <p>...</p>
-      <% end %>
+      <div class="article-content-item">
+        <% if article.published? %>
+            <p class="title"><%= article.title %></p>
+            <div class="process-time">
+              <span>Created: <%= time_ago_in_words(article.created_at) %> ago </span> |
+              <span class="like-count">
+                <%= article.like_count %>
+                <span><%= button_to 'like', increase_like_path(:id => article.id), method: "put" %></span>
+              </span>
+            </div>
+            <div class="article-content">
+              <p class="intro-text"><%= article.string %></p>
+              <% article.all_texts_and_images.each do |content| %>
+                  <p class="article-headline"><%= content.headline  %></p>
+                  <% if content.try(:url) %>
+                      <p class="article-image"><%= image_tag content.url  %></p>
+                  <% else %>
+                      <p class="article-text"><%= content.content  %></p>
+                  <% end %>
+              <% end %>
+            </div>
+        <% end %>
+      </div>
     <% end %>
 </div>
